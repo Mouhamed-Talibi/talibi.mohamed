@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Mohamed Talibi - Développeur Web Créatif
+    </title>
+
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+        crossorigin="anonymous">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Font awesom -->
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Roboto:wght@400;500;700&display=swap" 
+        rel="stylesheet">
+
+    <!-- Css style -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg custom-navbar">
+            <div class="container-fluid">
+
+                <!-- BRAND -->
+                <a class="navbar-brand d-flex align-items-center" href="">
+                    <h3>mohamed.talibi</h3>
+                </a>
+
+                <!-- HAMBURGER / TOGGLER (Mobile) -->
+                <button class="navbar-toggler custom-toggler" type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileMenu"
+                        aria-controls="mobileMenu">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <!-- DESKTOP LINKS -->
+                <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
+                    <ul class="navbar-nav align-items-center gap-2">
+
+                        <li class="nav-item">
+                            <a class="nav-link activated" href="index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#about">À propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#services">Mes Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Mes Projets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 🔵 OFFCANVAS MENU (Mobile + Tablet) -->
+        <div class="offcanvas offcanvas-start mobile-menu" tabindex="-1" id="mobileMenu">
+            <div class="offcanvas-header">
+                <h3>talibi.mohamed</h3>
+                <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav text-start gap-3">
+                    <li><a class="nav-link activated" href="index.html" data-bs-dismiss="offcanvas">Accueil</a></li>
+                    <li><a class="nav-link" href="index.html#about" data-bs-dismiss="offcanvas">À propos</a></li>
+                    <li><a class="nav-link" href="index.html#services" data-bs-dismiss="offcanvas">Mes Services</a></li>
+                    <li><a class="nav-link" href="" data-bs-dismiss="offcanvas">Mes Projets</a></li>
+                    <li><a class="nav-link" href="index.html#contact" data-bs-dismiss="offcanvas">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Projects section -->
+        <section class="projects" id="projects">
+            <div class="container projects-header">
+                <div class="d-flex justify-content-between align-items-center" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                    <div class="projects-title">
+                        <span>Galerie de travaux</span>
+                        <h1>Mes Projets</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container projects-body mt-4">
+                <div class="row justify-content-center align-items-start g-3">
+
+                    <!-- Project card -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="700">
+                        <div class="project-card">
+                            <img src="imgs/mockups/dentora-mockup.png" alt="Website Mockup" class="project-img" loading="lazy">
+                            <div class="project-content text-center text-lg-start">
+                                <span class="project-badge">Landing Page</span>
+                                <h3 class="project-title">Landing Page pour un centre dentaire</h3>
+                                <p class="project-description">
+                                    Un site moderne et professionnel qui reflète l’identité du centre dentaire, présentant clairement les services, les parcours et un système de réservation simple et efficace.
+                                </p>
+                                <a href="https://webloomdig-ux.github.io/Dentora/" class="project-link">
+                                    Voir le site
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project card -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-down" data-aos-duration="500" data-aos-delay="300">
+                        <div class="project-card">
+                            <img src="imgs/mockups/ainess-mockup.png" alt="Website Mockup" class="project-img" loading="lazy">
+                            <div class="project-content text-center text-lg-start">
+                                <span class="project-badge">Landing Page</span>
+                                <h3 class="project-title">Landing Page pour le café Ainess</h3>
+                                <p class="project-description">
+                                    Une page d’atterrissage élégante qui met en valeur l’ambiance du café, le menu et les services, avec un design qui donne envie de visiter.
+                                </p>
+                                <a href="https://webloomdig-ux.github.io/Ainess/" class="project-link">
+                                    Voir le site
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project card -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-down" data-aos-duration="500" data-aos-delay="700">
+                        <div class="project-card">
+                            <img src="imgs/mockups/picksouk-mockup.png" alt="Website Mockup" class="project-img" loading="lazy">
+                            <div class="project-content text-center text-lg-start">
+                                <span class="project-badge">Site E-commerce</span>
+                                <h3 class="project-title">Boutique en ligne moderne pour Picksouk</h3>
+                                <p class="project-description">
+                                    Une interface moderne et rapide mettant en valeur les produits, le paiement à la livraison et une expérience fluide pour faciliter l’achat et renforcer la confiance du client.
+                                </p>
+                                <a href="https://picksouk.com/" class="project-link">
+                                    Voir le site
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project card -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="400">
+                        <div class="project-card">
+                            <img src="imgs/mockups/drSounny-mockup.png" alt="Website Mockup" class="project-img" loading="lazy">
+                            <div class="project-content text-center text-lg-start">
+                                <span class="project-badge">Landing Page</span>
+                                <h3 class="project-title">Landing Page pour la clinique du Dr. Sonny</h3>
+                                <p class="project-description">
+                                    Un design calme et rassurant présentant les services ophtalmologiques, les rendez-vous et l’expertise du docteur.
+                                </p>
+                                <a href="https://webloomdig-ux.github.io/opthCenter/" class="project-link">
+                                    Voir le site
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project card -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+                        <div class="project-card">
+                            <img src="imgs/mockups/foody-mockup.png" alt="Website Mockup" class="project-img" loading="lazy">
+                            <div class="project-content text-center text-lg-start">
+                                <span class="project-badge">Landing Page</span>
+                                <h3 class="project-title">Landing Page pour le restaurant Foody</h3>
+                                <p class="project-description">
+                                    Une présentation appétissante qui met en avant les plats, les offres et les moyens de contact, donnant envie de commander immédiatement.
+                                </p>
+                                <a href="https://webloomdig-ux.github.io/wallaFood/" class="project-link">
+                                    Voir le site
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project card -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="600">
+                        <div class="project-card">
+                            <img src="imgs/mockups/hpm-mockup.png" alt="Website Mockup" class="project-img" loading="lazy">
+                            <div class="project-content text-center text-lg-start">
+                                <span class="project-badge">Landing Page</span>
+                                <h3 class="project-title">Landing Page pour le centre de formation HPM</h3>
+                                <p class="project-description">
+                                    Une page éducative claire qui présente les formations, les objectifs et les modalités d’inscription avec une expérience professionnelle.
+                                </p>
+                                <a href="https://webloomdig-ux.github.io/hpmCenter/" class="project-link">
+                                    Voir le site
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hero section -->
+        <section id="hero" class="container-fluid hero">
+            <div class="hero-content row align-items-center justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="hero-text">
+
+                        <!-- Main Text -->
+                        <div class="text-block main-text active">
+                            <h1>Collaborons pour Donner Vie à Votre Projet Web</h1>
+                            <p class="hero-desc">
+                                Développeur web passionné, je mets mon expertise technique et créative à votre service. 
+                                De la conception à la mise en ligne, je vous accompagne dans la création d'une présence en 
+                                ligne qui reflète parfaitement votre vision et vos valeurs.
+                            </p>
+                        </div>
+
+                        <!-- Secondary Text -->
+                        <div class="text-block secondary-text">
+                            <h1>Créons Ensemble Votre Site Web d'Exception</h1>
+                            <p class="hero-desc">
+                                Développeur web passionné, je transforme vos idées en expériences digitales performantes et 
+                                élégantes. Avec une expertise en technologies modernes et une approche collaborative, je vous 
+                                accompagne de la conception à la mise en ligne de votre projet.
+                            </p>
+                        </div>
+
+                        <div class="hero-links d-flex gap-3 mt-4">
+                            <a href="index.html#contact" class="main-btn btn">Contactez-moi</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6">
+                    <div class="grid-images">
+                        <div class="grid-img i2"></div>
+                        <div class="grid-img i1"></div>
+                        <div class="grid-img i3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row align-items-center text-center text-lg-start">
+                    <!-- Brand + Description -->
+                    <div class="col-lg-6 mb-3 mb-lg-0">
+                        <h3 class="footer-brand">mohamed.talibi</h3>
+                        <p class="footer-desc">
+                            Développeur web passionné, spécialisé dans la création de sites modernes et performants.
+                            J’aide les entreprises à construire leur présence digitale avec professionnalisme et créativité.
+                        </p>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="col-lg-6">
+                        <div class="footer-social d-flex justify-content-center justify-content-lg-end gap-3">
+                            <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/mouhamedtalibi/" class="social-link"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://github.com/Mouhamed-Talibi" class="social-link"><i class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="footer-bottom text-center mt-4">
+                    <p>© 2025 - Tous droits réservés</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- End of content -->
+
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+        crossorigin="anonymous"></script>
+    <!-- Loader js -->
+    <script src="js/loader.js"></script>
+    <!-- Navbar js -->
+    <script src="js/nav.js"></script>
+    <!-- hero text switch -->
+    <script src="js/htSwitch.js"></script>
+    <!-- Submit -->
+    <script src="js/submit.js"></script>
+</body>
+</html>
