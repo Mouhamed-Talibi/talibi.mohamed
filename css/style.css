@@ -1,0 +1,284 @@
+:root {
+    /* ===== Fonts ===== */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    --font-lato: 'Lato', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+
+    /* ======= Colors ====== */
+    --color-white: #ffffff;
+    --color-black: #111111ea;
+    --color-dark-gray: #222222;
+    --color-teal: #0A97B0;
+    --color-blue: #0A5EB0;
+    --color-charcoal: #1E201E;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Body Settings */
+body {
+    font-family: var(--font-lato);
+    background-color: var(--color-white);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Loader */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--surface-light); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.4s ease;
+    /* prevent any potential overflow */
+    overflow: hidden;
+    max-width: 100vw;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite
+}
+
+.loader::before , .loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid var(--color-blue);
+    animation: prixClipFix 2s linear infinite ;
+}
+
+.loader::after{
+    border-color: var(--color-charcoal);
+    animation: prixClipFix 2s linear infinite , rotate 0.5s linear infinite reverse;
+    inset: 6px;
+}
+
+@keyframes rotate {
+    0%   {transform: rotate(0deg)}
+    100%   {transform: rotate(360deg)}
+}
+
+@keyframes prixClipFix {
+    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}
+
+/* Hide content until loader finishes */
+.content {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* ===== BUTTONS ===== */
+.main-btn {
+    background: var(--color-blue);
+    color: var(--color-white);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.main-btn:hover {
+    background: var(--color-teal);
+    transform: scale(1.05);
+}
+
+/* Secondary Button */
+.secondary-btn {
+    background: transparent;
+    border: 2px solid var(--color-teal);
+    color: var(--color-teal);
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: 0.25s ease;
+}
+
+.secondary-btn:hover {
+    background: var(--color-teal);
+    color: var(--color-white);
+    transform: scale(1.05);
+}
+
+/* Navbar ======================================================================================================================== */
+.custom-navbar {
+    background: var(--color-black);
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+}
+
+/* LOGO */
+.navbar-brand h3 {
+    font-family: var(--font-lato);
+    color: var(--color-teal);
+    font-weight: 700;
+}
+
+/* LINKS */
+.nav-link {
+    color: var(--color-white);
+    font-weight: 500;
+    font-family: var(--font-lato);
+    padding: 8px 14px !important;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.activated {
+    color: var(--color-white);
+    background: var(--color-blue);
+    border-radius: 6px;
+}
+
+/* HAMBURGER MENU */
+.custom-toggler {
+    border: none;
+    background: transparent;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.custom-toggler:focus,
+.custom-toggler:active,
+.custom-toggler:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.custom-toggler span {
+    height: 3px;
+    width: 100%;
+    background: var(--color-teal);
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+/* OFFCANVAS */
+.mobile-menu {
+    width: 280px;
+    background: var(--color-white);
+}
+
+.mobile-menu .offcanvas-header {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.mobile-menu .offcanvas-title {
+    font-family: var(--font-heading);
+    color: var(--color-white);
+}
+
+.mobile-menu .nav-link {
+    font-size: .9rem;
+    color: var(--color-charcoal);
+}
+
+.mobile-menu .nav-link:hover {
+    color: var(--color-white);
+}
+
+@media (max-width: 991px) {
+    .navbar-brand .logo {
+        height: 30px;
+    }
+}
+
+/* Hero ======================================================================================================================== */
+.hero {
+    padding: 80px 40px;
+}
+
+.hero-text h1 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 2.4rem;
+}
+
+.hero-desc {
+    font-family: var(--font-body);
+    margin-top: 12px;
+    color: var(--color-charcoal);
+    line-height: 1.7;
+}
+
+/* Text fading animation */
+.text-block {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: opacity .7s ease;
+}
+
+.text-block.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+/* ===== GRID IMAGES ===== */
+.grid-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 180px);
+    gap: 14px;
+}
+
+.grid-img {
+    width: 100%;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(.85);
+    transition: 0.3s ease;
+}
+
+.grid-img:hover {
+    transform: scale(1.04);
+    filter: brightness(1);
+}
+
+/* 3 Images */
+.i1 { background-image: url('../imgs/coding-.jpg'); grid-row: span 2; }
+.i2 { background-image: url('../imgs/coding-1.jpg'); }
+.i3 { background-image: url('../imgs/coding-2.jpg'); }
+
+/* Responsive */
+@media(max-width: 768px) {
+    .hero {
+        padding: 50px 20px;
+    }
+    .grid-images {
+        margin-top: 30px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px 150px;
+    }
+}
